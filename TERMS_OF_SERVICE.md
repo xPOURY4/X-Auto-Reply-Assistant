@@ -2,7 +2,7 @@
 
 **X Auto Reply Assistant**
 
-*Last Updated: January 2025*
+*Last Updated: september 2025*
 
 ---
 
