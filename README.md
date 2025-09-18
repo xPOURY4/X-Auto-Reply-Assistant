@@ -1,6 +1,6 @@
 # 🤖 X Auto Reply Assistant
 
-[![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Download-blue?style=for-the-badge&logo=google-chrome)](https://chrome.google.com/webstore/detail/x-auto-reply-assistant)
+[![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Download-blue?style=for-the-badge&logo=google-chrome)](https://chromewebstore.google.com/detail/x-auto-reply-assistant/hopmlipidbngnbkokpjllfflnedfajfc?pli=1)
 [![Version](https://img.shields.io/badge/Version-1.0.0-green?style=for-the-badge)](https://github.com/xPOURY4/X-Auto-Reply-Assistant)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
@@ -34,18 +34,10 @@
 
 ### 🌟 From Chrome Web Store (Recommended)
 
-1. 🔗 **[Download from Chrome Web Store](https://chrome.google.com/webstore/detail/x-auto-reply-assistant)**
+1. 🔗 **[Download from Chrome Web Store](https://chromewebstore.google.com/detail/x-auto-reply-assistant/hopmlipidbngnbkokpjllfflnedfajfc?pli=1)**
 2. 📌 Click "Add to Chrome"
 3. ✅ Confirm installation
 4. 🎉 Start generating amazing replies!
-
-### 🛠️ Manual Installation (Developer Mode)
-
-1. 📂 Download or clone this repository
-2. 🔧 Open Chrome and go to `chrome://extensions/`
-3. 🔄 Enable "Developer mode" (top right)
-4. 📁 Click "Load unpacked" and select the extension folder
-5. ✨ The extension will appear in your toolbar
 
 ## 🚀 Quick Start Guide
 
@@ -155,7 +147,7 @@ If you find this extension helpful:
 
 **🚀 Transform your Twitter engagement today! 🌟**
 
-[![Download Now](https://img.shields.io/badge/Download%20Now-Chrome%20Web%20Store-blue?style=for-the-badge&logo=google-chrome)](https://chrome.google.com/webstore/detail/x-auto-reply-assistant)
+[![Download Now](https://img.shields.io/badge/Download%20Now-Chrome%20Web%20Store-blue?style=for-the-badge&logo=google-chrome)](https://chromewebstore.google.com/detail/x-auto-reply-assistant/hopmlipidbngnbkokpjllfflnedfajfc?pli=1)
 
 *Made with ❤️ for the Twitter community*
 
