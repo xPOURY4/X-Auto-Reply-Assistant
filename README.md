@@ -1,10 +1,22 @@
 # 🤖 X Auto Reply Assistant
 
 [![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Download-blue?style=for-the-badge&logo=google-chrome)](https://chromewebstore.google.com/detail/x-auto-reply-assistant/hopmlipidbngnbkokpjllfflnedfajfc?pli=1)
-[![Version](https://img.shields.io/badge/Version-1.0.0-green?style=for-the-badge)](https://github.com/xPOURY4/X-Auto-Reply-Assistant)
+[![Version](https://img.shields.io/badge/Version-2.1.41-green?style=for-the-badge)](https://github.com/xPOURY4/X-Auto-Reply-Assistant)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
 > 🚀 **Generate natural, context-aware replies that feel authentically human on X/Twitter!**
+
+## 🆕 What's New in v2.1.41
+
+### 🛠️ **Custom Model Support**
+- 🎯 Use any OpenRouter model by entering custom model names
+- 🚀 Support for latest models like `x-ai/grok-4-fast:free`, `anthropic/claude-sonnet-4.5`
+- 🔧 Easy configuration through dropdown selection
+
+### 💼 **X Pro Compatibility**
+- ✅ Full support for `pro.x.com`
+- 🔄 Seamless functionality across all X platforms
+- 🎯 Enhanced user experience for X Pro users
 
 ## ✨ Features
 
@@ -12,6 +24,7 @@
 - 🔥 Powered by **Gemini API** & **OpenRouter**
 - 🎯 Context-aware response generation
 - 🤖 Multiple AI model support
+- 🛠️ **Custom Model Support** - Use any OpenRouter model (e.g., `x-ai/grok-4-fast:free`, `anthropic/claude-sonnet-4.5`)
 
 ### ⚡ **Lightning Fast Performance**
 - 🚀 Generate replies in seconds
@@ -23,6 +36,11 @@
 - 😊 **Casual** - For friendly conversations
 - 🤝 **Friendly** - For warm engagement
 - 😄 **Witty** - For humorous responses
+
+### 🌐 **Platform Support**
+- 🐦 **X/Twitter** - Full support for twitter.com and x.com
+- 💼 **X Pro** - Complete compatibility with pro.x.com
+- 🔄 Seamless cross-platform functionality
 
 ### 🛡️ **Privacy & Security**
 - 🔐 API keys stored locally
@@ -45,6 +63,7 @@
 - 🔑 Click the extension icon in your toolbar
 - ⚙️ Go to Settings tab
 - 🔐 Add your Gemini API or OpenRouter key
+- 🛠️ **For OpenRouter**: Choose a model or select "Custom Model" to enter your preferred model name
 - 💾 Save your preferences
 
 ### 2️⃣ **Generate Your First Reply**
@@ -80,12 +99,14 @@
 - 🌐 Multiple model access
 - 💪 Advanced AI capabilities
 - 🔄 Model switching options
+- 🛠️ **Custom Model Support** - Enter any model name (e.g., `x-ai/grok-4-fast:free`, `anthropic/claude-sonnet-4.5`, `meta-llama/llama-3.1-8b-instruct:free`)
 
 ### ⚙️ **Settings Options**
 - 🎭 Default tone selection
 - 📝 Custom default text
 - 🔑 API key management
 - 🎨 Response customization
+- 🛠️ **Custom Model Configuration** - Select "Custom Model" from OpenRouter dropdown and enter your preferred model name
 
 ## 📊 How It Works
 
