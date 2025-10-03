@@ -160,7 +160,7 @@ If you find this extension helpful:
 - ⭐ Star this repository
 - 🔄 Share with friends
 - 📝 Leave a review on Chrome Web Store
-- 🐦 Tweet about it!
+- 🐦 Tweet about it!!
 
 ---
 
