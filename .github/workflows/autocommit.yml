@@ -20,7 +20,7 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Generate commit message
+      - name: Generate TODAY.md
         run: |
           python3 << 'EOF'
           import datetime
@@ -456,18 +456,13 @@ jobs:
 
           day_of_year = datetime.datetime.utcnow().timetuple().tm_yday
           quote = quotes[(day_of_year - 1) % len(quotes)]
-          with open("commit_message.txt", "w", encoding="utf-8") as f:
-              f.write(quote)
+          with open("TODAY.md", "w", encoding="utf-8") as f:
+              f.write(f"# Today\n\n{quote}\n")
           EOF
-
-      - name: Update LAST_UPDATED
-        run: |
-          date '+%Y-%m-%dT%H:%M:%SZ' > LAST_UPDATED
 
       - name: Commit and push
         run: |
           git config --local user.email "42737278+xPOURY4@users.noreply.github.com"
           git config --local user.name "xPOURY4"
-          git add -A
-          git commit -m "$(cat commit_message.txt)"
-          git push https://xPOURY4:${{ secrets.TOKEN }}@github.com/xPOURY4/X-Auto-Reply-Assistant.git
+          git add TODAY.md
+          git diff --cached --quiet || (git commit -m "$(cat TODAY.md | grep -v '^#' | head -n1)" && git push https://xPOURY4:${{ secrets.TOKEN }}@github.com/xPOURY4/X-Auto-Reply-Assistant.git)
