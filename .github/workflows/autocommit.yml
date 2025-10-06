@@ -458,6 +458,8 @@ jobs:
           quote = quotes[(day_of_year - 1) % len(quotes)]
           with open("TODAY.md", "w", encoding="utf-8") as f:
               f.write(f"# Today\n\n{quote}\n")
+          with open("commit_msg.txt", "w", encoding="utf-8") as f:
+              f.write(quote)
           EOF
 
       - name: Commit and push
@@ -465,4 +467,4 @@ jobs:
           git config --local user.email "42737278+xPOURY4@users.noreply.github.com"
           git config --local user.name "xPOURY4"
           git add TODAY.md
-          git diff --cached --quiet || (git commit -m "$(cat TODAY.md | grep -v '^#' | head -n1)" && git push https://xPOURY4:${{ secrets.TOKEN }}@github.com/xPOURY4/X-Auto-Reply-Assistant.git)
+          git diff --cached --quiet || (git commit -m "$(cat commit_msg.txt)" && git push https://xPOURY4:${{ secrets.TOKEN }}@github.com/xPOURY4/X-Auto-Reply-Assistant.git)
