@@ -452,9 +452,8 @@ jobs:
             "Don’t be afraid to stand for what you believe in, even if it means standing alone.",
             "The only thing we have to fear is fear itself.",
             "Do what you can, with what you have, where you are."
-            ]
-
           ]
+
           day_of_year = datetime.datetime.utcnow().timetuple().tm_yday
           quote = quotes[(day_of_year - 1) % len(quotes)]
           with open("commit_message.txt", "w", encoding="utf-8") as f:
