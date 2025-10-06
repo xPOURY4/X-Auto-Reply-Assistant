@@ -1,4 +1,4 @@
-# 🛡️ Privacy Policy
+# 🛡️🛡️ Privacy Policy
 
 **X Auto Reply Assistant**
 
