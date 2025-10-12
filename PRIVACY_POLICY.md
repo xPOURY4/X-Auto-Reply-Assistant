@@ -2,7 +2,7 @@
 
 **X Auto Reply Assistant**
 
-*Last Updated: september 2025*
+*Last Updated: October 12, 2025*
 
 ---
 
@@ -94,6 +94,24 @@ When you use OpenRouter:
 - This is governed by [OpenRouter's Privacy Policy](https://openrouter.ai/privacy)
 - We don't store or access this communication
 
+### 🟡 **OpenAI**
+When you use OpenAI models:
+- Your tweet content is sent to OpenAI's service
+- This is governed by [OpenAI's Privacy Policy](https://openai.com/privacy/)
+- We don't store or access this communication
+
+### 🟣 **DeepSeek**
+When you use DeepSeek models:
+- Your tweet content is sent to DeepSeek's service
+- This is governed by [DeepSeek's Privacy Policy](https://www.deepseek.com/privacy)
+- We don't store or access this communication
+
+### 🔵 **Anthropic Claude**
+When you use Claude models:
+- Your tweet content is sent to Anthropic's service
+- This is governed by [Anthropic's Privacy Policy](https://www.anthropic.com/privacy)
+- We don't store or access this communication
+
 **🔑 Important**: You control which service to use and can switch anytime!
 
 ---
@@ -110,15 +128,22 @@ When you use OpenRouter:
 - **Scope**: Local browser storage only
 - **Data**: Settings, preferences, and encrypted API keys
 
-### 📝 **scripting**
-- **Purpose**: Add reply buttons and insert generated responses
-- **Scope**: X/Twitter pages only
-- **Data**: No data collection - interface enhancement only
-
 ### 🖱️ **contextMenus**
 - **Purpose**: Right-click menu options for quick access
 - **Scope**: X/Twitter pages only
 - **Data**: No data access - UI feature only
+
+### ⏰ **alarms**
+- **Purpose**: Periodic cleanup of temporary data
+- **Scope**: Local extension only
+- **Data**: No data access - maintenance feature only
+
+### 🌐 **Host Permissions**
+We request access to these domains for core functionality:
+- **X/Twitter**: `twitter.com`, `x.com`, `pro.x.com` - For reading tweets and injecting reply buttons
+- **AI Services**: `generativelanguage.googleapis.com`, `openrouter.ai`, `api.openai.com`, `api.deepseek.com`, `api.anthropic.com` - For AI reply generation
+- **Purpose**: Enable communication with chosen AI providers
+- **Data**: Only tweet content sent to your selected AI service
 
 ---
 
