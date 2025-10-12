@@ -1,22 +1,35 @@
 # 🤖 X Auto Reply Assistant
 
 [![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Download-blue?style=for-the-badge&logo=google-chrome)](https://chromewebstore.google.com/detail/x-auto-reply-assistant/hopmlipidbngnbkokpjllfflnedfajfc?pli=1)
-[![Version](https://img.shields.io/badge/Version-2.1.41-green?style=for-the-badge)](https://github.com/xPOURY4/X-Auto-Reply-Assistant)
+[![Version](https://img.shields.io/badge/Version-2.6.9-green?style=for-the-badge)](https://github.com/xPOURY4/X-Auto-Reply-Assistant)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
 > 🚀 **Generate natural, context-aware replies that feel authentically human on X/Twitter!**
 
-## 🆕 What's New in v2.1.41
+## 🆕 What's New in v2.6.9
+
+### 🤖 **Enhanced AI Response Quality**
+- 🧠 Improved prompt engineering for more human-like responses
+- 🎭 Better tone consistency across all response styles
+- 🔧 Advanced response processing to eliminate AI-like patterns
+- ⚡ Optimized API calls with timeout handling for better reliability
 
 ### 🛠️ **Custom Model Support**
 - 🎯 Use any OpenRouter model by entering custom model names
-- 🚀 Support for latest models like `x-ai/grok-4-fast:free`, `anthropic/claude-sonnet-4.5`
+- 🚀 Support for latest models like `deepseek/deepseek-chat-v3.1:free`, `openai/gpt-oss-20b:free`, `qwen/qwen3-coder:free`, `moonshotai/kimi-k2:free`
 - 🔧 Easy configuration through dropdown selection
+- 🎨 Improved model selection UI with better organization
 
 ### 💼 **X Pro Compatibility**
 - ✅ Full support for `pro.x.com`
 - 🔄 Seamless functionality across all X platforms
 - 🎯 Enhanced user experience for X Pro users
+
+### 🎨 **UI/UX Improvements**
+- 🌟 Professional landing page for better user onboarding
+- 📱 Improved responsive design across all components
+- 🎯 Better accessibility and keyboard navigation
+- 🔄 Smoother animations and transitions
 
 ## ✨ Features
 
@@ -96,10 +109,26 @@
 - 🎯 Excellent context understanding
 
 #### 🔵 **OpenRouter**
-- 🌐 Multiple model access
-- 💪 Advanced AI capabilities
-- 🔄 Model switching options
-- 🛠️ **Custom Model Support** - Enter any model name (e.g., `x-ai/grok-4-fast:free`, `anthropic/claude-sonnet-4.5`, `meta-llama/llama-3.1-8b-instruct:free`)
+- 🌐 Multiple model access with 4 curated free models
+- 💪 Advanced AI capabilities from leading providers
+- 🔄 Easy model switching through dropdown selection
+- 🛠️ **Custom Model Support** - Enter any model name for specialized use cases
+- 🆓 **Free Models Included**: `deepseek/deepseek-chat-v3.1:free`, `openai/gpt-oss-20b:free`, `qwen/qwen3-coder:free`, `moonshotai/kimi-k2:free`
+
+#### 🟡 **OpenAI**
+- 🚀 Latest GPT models including GPT-4o, GPT-4-turbo, GPT-3.5-turbo
+- 🎯 High-quality responses with excellent context understanding
+- 🔧 Custom model support for specialized applications
+
+#### 🟣 **DeepSeek**
+- 🧠 Specialized in reasoning and coding tasks
+- ⚡ Fast response times with deepseek-chat and deepseek-reasoner models
+- 🎯 Optimized for technical and analytical responses
+
+#### 🔵 **Anthropic Claude**
+- 🤖 Claude Sonnet 4.5, Claude Opus 4.1, and other advanced models
+- 🎭 Excellent for nuanced and contextual conversations
+- 🛡️ Strong safety and alignment features
 
 ### ⚙️ **Settings Options**
 - 🎭 Default tone selection
@@ -160,7 +189,7 @@ If you find this extension helpful:
 - ⭐ Star this repository
 - 🔄 Share with friends
 - 📝 Leave a review on Chrome Web Store
-- 🐦 Tweet about it!!
+- 🐦 Tweet about it!
 
 ---
 
