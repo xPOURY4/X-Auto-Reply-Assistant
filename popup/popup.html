@@ -1,0 +1,361 @@
+<!--
+  X Auto Reply Assistant
+  Copyright (c) 2025 TherealPourya
+  Email: hexQuant@gmail.com
+  X (Twitter): @TherealPourya
+  
+  All rights reserved. This software is proprietary and confidential.
+  Unauthorized copying, distribution, or use is strictly prohibited.
+  For licensing inquiries, contact: hexQuant@gmail.com
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>X Auto Reply Assistant</title>
+  <link rel="stylesheet" href="popup.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="popup-container">
+    <!-- Header -->
+    <div class="header">
+      <h1>
+        <i class="fab fa-twitter"></i>
+        X Auto Reply
+      </h1>
+      <div class="status-container">
+        <div class="provider-status">
+          <span id="providerPill" class="provider-pill">Using: Gemini</span>
+          <div id="modelInfo" class="model-info">Model: gemini-2.0-flash</div>
+        </div>
+        <div class="extension-status">
+          <span id="statusIndicator" class="status-indicator active">●</span>
+          <span id="statusLabel" class="status-label">Active</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab Bar -->
+    <div class="tab-bar">
+      <button class="tab-btn active" data-tab="generate">
+        <i class="fas fa-magic"></i>
+        Generate
+      </button>
+      <button class="tab-btn" data-tab="settings">
+        <i class="fas fa-cog"></i>
+        Settings
+      </button>
+    </div>
+
+    <!-- Generate Tab Content -->
+    <div id="generateContent" class="tab-content active">
+      <form class="settings-form">
+        <!-- Word Count Range -->
+        <div class="form-group">
+          <label for="minWords">Word Count Range</label>
+          <div class="range-inputs">
+            <input type="number" id="minWords" min="5" max="50" value="5" class="range-input">
+            <span class="range-separator">to</span>
+            <input type="number" id="maxWords" min="10" max="100" value="16" class="range-input">
+          </div>
+          <div class="range-preview" id="rangePreview">5-16 words</div>
+        </div>
+
+        <!-- Default Text -->
+        <div class="form-group">
+          <label for="defaultText">Default Text (Optional)</label>
+          <textarea id="defaultText" placeholder="Enter default text to include in replies..." rows="3"></textarea>
+          <div class="help-text">This text will be included in every generated reply</div>
+        </div>
+
+        <!-- Include Emoji -->
+        <div class="form-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="includeEmoji" checked>
+            <span class="checkmark"></span>
+            Include Emojis
+          </label>
+          <div class="help-text">Add relevant emojis to make replies more engaging</div>
+        </div>
+
+        <!-- Tone Selection -->
+        <div class="form-group">
+          <label>Tone</label>
+          <div class="tone-grid">
+            <label class="tone-option">
+              <input type="radio" name="tone" value="casual" checked>
+              <span class="tone-label">Casual</span>
+              <span class="tone-description">Friendly, contractions, light emojis</span>
+            </label>
+            <label class="tone-option">
+              <input type="radio" name="tone" value="professional">
+              <span class="tone-label">Professional</span>
+              <span class="tone-description">Business-casual, clear, no emoji</span>
+            </label>
+            <label class="tone-option">
+              <input type="radio" name="tone" value="humorous">
+              <span class="tone-label">Humorous</span>
+              <span class="tone-description">Playful wit, safe jokes, upbeat</span>
+            </label>
+            <label class="tone-option">
+              <input type="radio" name="tone" value="formal">
+              <span class="tone-label">Formal</span>
+              <span class="tone-description">Grammatical, no contractions, advanced</span>
+            </label>
+            <label class="tone-option">
+              <input type="radio" name="tone" value="pro-plus">
+              <span class="tone-label">Pro-Plus</span>
+              <span class="tone-description">Executive, power verbs, confident</span>
+            </label>
+            <label class="tone-option">
+              <input type="radio" name="tone" value="academic">
+              <span class="tone-label">Academic</span>
+              <span class="tone-description">Scholarly, precise, neutral objectivity</span>
+            </label>
+            <label class="tone-option">
+              <input type="radio" name="tone" value="troll">
+              <span class="tone-label">Troll 🙄</span>
+              <span class="tone-description">Belittling roast, sarcastic diminutives</span>
+            </label>
+            <label class="tone-option">
+              <input type="radio" name="tone" value="bully">
+              <span class="tone-label">Bully 🤡</span>
+              <span class="tone-description">Playful trash-talk, absurd comparisons</span>
+            </label>
+            <label class="tone-option">
+              <input type="radio" name="tone" value="roasting">
+              <span class="tone-label">Roasting 🐐</span>
+              <span class="tone-description">Countryside mockery, farm metaphors</span>
+            </label>
+          </div>
+          <div class="help-text">Choose the writing style for generated replies</div>
+        </div>
+
+        <!-- Delay Range -->
+        <div class="form-group">
+          <label for="delayRange">Reply Delay</label>
+          <select id="delayRange">
+            <option value="1-3">1-3 seconds (Fast)</option>
+            <option value="3-8" selected>3-8 seconds (Normal)</option>
+            <option value="8-15">8-15 seconds (Slow)</option>
+            <option value="15-30">15-30 seconds (Very Slow)</option>
+          </select>
+          <div class="help-text">Random delay before posting reply</div>
+        </div>
+
+        <!-- Typing Speed -->
+        <div class="form-group">
+          <label for="typingSpeed">Typing Speed</label>
+          <select id="typingSpeed">
+            <option value="instant">Instant</option>
+            <option value="fast">Fast</option>
+            <option value="normal" selected>Normal</option>
+            <option value="slow">Slow</option>
+          </select>
+          <div class="help-text">Speed of text typing animation</div>
+        </div>
+
+        <!-- Save Button -->
+        <button type="button" id="saveBtn" class="save-btn">
+          <i class="fas fa-save"></i>
+          Save Settings
+        </button>
+
+        <!-- Status Message -->
+        <div id="statusMessage" class="status-message"></div>
+      </form>
+    </div>
+
+    <!-- Settings Tab Content -->
+    <div id="settingsContent" class="tab-content">
+      <form class="settings-form">
+        <!-- Provider Selection -->
+        <div class="form-group">
+          <label for="provider">AI Provider</label>
+          <select id="provider">
+            <option value="gemini">Google Gemini</option>
+            <option value="openrouter">OpenRouter</option>
+            <option value="openai">OpenAI</option>
+            <option value="deepseek">DeepSeek</option>
+            <option value="claude">Anthropic Claude</option>
+          </select>
+          <div class="help-text">Choose your preferred AI provider</div>
+        </div>
+
+        <!-- Gemini API Key -->
+        <div id="geminiKeyGroup" class="form-group">
+          <label for="geminiApiKey">Gemini API Key</label>
+          <div class="input-wrapper">
+            <input type="password" id="geminiApiKey" placeholder="Enter your Gemini API key...">
+            <button type="button" id="toggleGeminiKey" class="icon-btn">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+          <div class="help-text">
+            Get your free API key from <a href="#" id="geminiHelpLink">Google AI Studio</a>
+          </div>
+        </div>
+
+        <!-- OpenRouter API Key -->
+        <div id="openRouterKeyGroup" class="form-group" style="display: none;">
+          <label for="openRouterApiKey">OpenRouter API Key</label>
+          <div class="input-wrapper">
+            <input type="password" id="openRouterApiKey" placeholder="Enter your OpenRouter API key...">
+            <button type="button" id="toggleOpenRouterKey" class="icon-btn">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+          <div class="help-text">
+            Get your API key from <a href="https://openrouter.ai/keys" target="_blank">OpenRouter</a>
+          </div>
+        </div>
+
+        <!-- OpenAI API Key -->
+        <div id="openaiKeyGroup" class="form-group" style="display: none;">
+          <label for="openaiApiKey">OpenAI API Key</label>
+          <div class="input-wrapper">
+            <input type="password" id="openaiApiKey" placeholder="Enter your OpenAI API key...">
+            <button type="button" id="toggleOpenaiKey" class="icon-btn">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+          <div class="help-text">
+            Get your API key from <a href="https://platform.openai.com/api-keys" target="_blank">OpenAI Platform</a>
+          </div>
+        </div>
+
+        <!-- DeepSeek API Key -->
+        <div id="deepseekKeyGroup" class="form-group" style="display: none;">
+          <label for="deepseekApiKey">DeepSeek API Key</label>
+          <div class="input-wrapper">
+            <input type="password" id="deepseekApiKey" placeholder="Enter your DeepSeek API key...">
+            <button type="button" id="toggleDeepseekKey" class="icon-btn">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+          <div class="help-text">
+            Get your API key from <a href="https://platform.deepseek.com/api_keys" target="_blank">DeepSeek Platform</a>
+          </div>
+        </div>
+
+        <!-- Claude API Key -->
+        <div id="claudeKeyGroup" class="form-group" style="display: none;">
+          <label for="claudeApiKey">Anthropic Claude API Key</label>
+          <div class="input-wrapper">
+            <input type="password" id="claudeApiKey" placeholder="Enter your Claude API key...">
+            <button type="button" id="toggleClaudeKey" class="icon-btn">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+          <div class="help-text">
+            Get your API key from <a href="https://console.anthropic.com/" target="_blank">Anthropic Console</a>
+          </div>
+        </div>
+
+        <!-- OpenRouter Model Selection -->
+        <div id="openRouterModelGroup" class="form-group" style="display: none;">
+          <label for="openRouterModel">OpenRouter Model</label>
+          <select id="openRouterModel">
+            <option value="deepseek/deepseek-chat-v3.1:free">DeepSeek Chat v3.1 (Free)</option>
+            <option value="openai/gpt-oss-20b:free">GPT OSS 20B (Free)</option>
+            <option value="qwen/qwen3-coder:free">Qwen 3 Coder (Free)</option>
+            <option value="moonshotai/kimi-k2:free">Kimi K2 (Free)</option>
+            <option value="custom">Custom Model</option>
+          </select>
+          <div class="help-text">Choose from available free models or select custom</div>
+        </div>
+
+        <!-- OpenRouter Custom Model Input -->
+        <div id="openRouterCustomModelGroup" class="form-group" style="display: none;">
+          <label for="openRouterCustomModelName">Custom Model Name</label>
+          <div class="input-wrapper">
+            <input type="text" id="openRouterCustomModelName" placeholder="e.g., x-ai/grok-4-fast:free or anthropic/claude-sonnet-4.5">
+          </div>
+          <div class="help-text">
+            Enter the exact model name from <a href="https://openrouter.ai/models" target="_blank">OpenRouter Models</a>
+          </div>
+        </div>
+
+        <!-- OpenAI Model Selection -->
+        <div id="openaiModelGroup" class="form-group" style="display: none;">
+          <label for="openaiModel">OpenAI Model</label>
+          <select id="openaiModel">
+            <option value="gpt-4o">GPT-4o</option>
+            <option value="gpt-4-turbo">GPT-4 Turbo</option>
+            <option value="gpt-3.5-turbo">GPT-3.5 Turbo</option>
+            <option value="custom">Custom Model</option>
+          </select>
+          <div class="help-text">Choose from available OpenAI models or select custom</div>
+        </div>
+
+        <!-- OpenAI Custom Model Input -->
+        <div id="openaiCustomModelGroup" class="form-group" style="display: none;">
+          <label for="openaiCustomModelName">Custom OpenAI Model Name</label>
+          <div class="input-wrapper">
+            <input type="text" id="openaiCustomModelName" placeholder="e.g., gpt-4-turbo or custom model name">
+          </div>
+          <div class="help-text">
+            Enter the exact model name from <a href="https://platform.openai.com/docs/models" target="_blank">OpenAI Models</a>
+          </div>
+        </div>
+
+        <!-- DeepSeek Model Selection -->
+        <div id="deepseekModelGroup" class="form-group" style="display: none;">
+          <label for="deepseekModel">DeepSeek Model</label>
+          <select id="deepseekModel">
+            <option value="deepseek-chat">DeepSeek Chat</option>
+            <option value="deepseek-reasoner">DeepSeek Reasoner</option>
+          </select>
+          <div class="help-text">Choose from available DeepSeek models</div>
+        </div>
+
+
+
+        <!-- Claude Model Selection -->
+        <div id="claudeModelGroup" class="form-group" style="display: none;">
+          <label for="claudeModel">Claude Model</label>
+          <select id="claudeModel">
+            <option value="claude-opus-4-20250514">Claude Opus 4 (2025-05-14)</option>
+            <option value="claude-opus-4-1-20250805">Claude Opus 4.1 (2025-08-05)</option>
+            <option value="claude-sonnet-4-20250514">Claude Sonnet 4 (2025-05-14)</option>
+            <option value="claude-sonnet-4-5-20250929">Claude Sonnet 4.5 (2025-09-29)</option>
+            <option value="custom">Custom Model</option>
+          </select>
+          <div class="help-text">Choose from available Claude models or select custom</div>
+        </div>
+
+        <!-- Claude Custom Model Input -->
+        <div id="claudeCustomModelGroup" class="form-group" style="display: none;">
+          <label for="claudeCustomModelName">Custom Claude Model Name</label>
+          <div class="input-wrapper">
+            <input type="text" id="claudeCustomModelName" placeholder="e.g., claude-3-haiku-20240307 or custom model name">
+          </div>
+          <div class="help-text">
+            Enter the exact model name from <a href="https://console.anthropic.com/" target="_blank">Anthropic Console</a>
+          </div>
+        </div>
+
+        <!-- Save Settings Button -->
+        <button type="button" id="saveSettingsBtn" class="save-btn">
+          <i class="fas fa-save"></i>
+          Save Settings
+        </button>
+
+        <!-- Settings Status Message -->
+        <div id="settingsStatusMessage" class="status-message"></div>
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="dev-credit">
+        Made with passion & ❤️ by <a href="https://x.com/TheRealPourya" target="_blank">TheTrealPourya</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+{
+    "manifest_version": 3,
+    "name": "X Auto Reply Assistant",
+    "version": "2.7.4",
+    "description": "AI-powered replies that feel human.Generate natural,context-aware responses on X/Twitter using Gemini API & OpenRouter–fast & smart",
+    "permissions": [
+        "storage",
+        "activeTab",
+        "contextMenus",
+        "alarms"
+    ],
+    "host_permissions": [
+        "https://twitter.com/*",
+        "https://x.com/*",
+        "https://pro.x.com/*",
+        "https://generativelanguage.googleapis.com/*",
+        "https://openrouter.ai/*",
+        "https://api.openai.com/*",
+        "https://api.deepseek.com/*",
+        "https://api.anthropic.com/*",
+        "https://hexquant.xyz/X-Auto-Reply-Assistant/"
+    ],
+    "background": {
+        "service_worker": "background/background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://twitter.com/*",
+                "https://x.com/*",
+                "https://pro.x.com/*"
+            ],
+            "js": ["content/content.js"],
+            "css": ["content/content.css"],
+            "run_at": "document_idle"
+        }
+    ],
+    "action": {
+        "default_popup": "popup/popup.html",
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "48": "icons/icon48.png",
+            "128": "icons/icon128.png"
+        }
+    },
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": ["content/content.css"],
+            "matches": ["https://twitter.com/*", "https://x.com/*", "https://pro.x.com/*"]
+        }
+    ]
+}
