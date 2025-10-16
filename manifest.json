@@ -17,8 +17,7 @@
         "https://openrouter.ai/*",
         "https://api.openai.com/*",
         "https://api.deepseek.com/*",
-        "https://api.anthropic.com/*",
-        "https://hexquant.xyz/X-Auto-Reply-Assistant/"
+        "https://api.anthropic.com/*"
     ],
     "background": {
         "service_worker": "background/background.js"
