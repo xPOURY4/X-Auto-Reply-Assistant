@@ -6,7 +6,7 @@
 
 > 🚀 **Generate natural, context-aware replies that feel authentically human on X/Twitter!**
 
-## 🆕 What's New in v2.6.9
+## 🆕 What's New in v2.7.0
 
 ### 🤖 **Enhanced AI Response Quality**
 - 🧠 Improved prompt engineering for more human-like responses
