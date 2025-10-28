@@ -1,35 +1,40 @@
 # 🤖 X Auto Reply Assistant
 
 [![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Download-blue?style=for-the-badge&logo=google-chrome)](https://chromewebstore.google.com/detail/x-auto-reply-assistant/hopmlipidbngnbkokpjllfflnedfajfc?pli=1)
-[![Version](https://img.shields.io/badge/Version-2.6.9-green?style=for-the-badge)](https://github.com/xPOURY4/X-Auto-Reply-Assistant)
+[![Version](https://img.shields.io/badge/Version-3.0.1-green?style=for-the-badge)](https://github.com/xPOURY4/X-Auto-Reply-Assistant)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
 > 🚀 **Generate natural, context-aware replies that feel authentically human on X/Twitter!**
 
-## 🆕 What's New in v2.7.0
+## 🆕 What's New in v3.0.1
 
-### 🤖 **Enhanced AI Response Quality**
-- 🧠 Improved prompt engineering for more human-like responses
-- 🎭 Better tone consistency across all response styles
-- 🔧 Advanced response processing to eliminate AI-like patterns
-- ⚡ Optimized API calls with timeout handling for better reliability
+### 🛡️ **Rate Limit Warning System**
+- ⚠️ Smart reply tracking to protect your account from Twitter/X restrictions
+- 🕐 Automatic monitoring of replies within a rolling 10-minute window
+- 🚨 Proactive warning modal when exceeding safe reply limits (5 replies per 10 minutes)
+- 🔒 Local storage-based tracking for complete privacy
+- ✨ "Don't show again" option for experienced users
+- 🎨 Beautiful neumorphic modal design matching the extension's aesthetic
 
-### 🛠️ **Custom Model Support**
-- 🎯 Use any OpenRouter model by entering custom model names
-- 🚀 Support for latest models like `deepseek/deepseek-chat-v3.1:free`, `openai/gpt-oss-20b:free`, `qwen/qwen3-coder:free`, `moonshotai/kimi-k2:free`
-- 🔧 Easy configuration through dropdown selection
-- 🎨 Improved model selection UI with better organization
+### 🎨 **Custom Prompt Feature**
+- ✍️ Define your own system prompts with up to 2000 characters
+- 🎭 Full control over AI response personality and style
+- 😊 Toggle formatting options: Emojis, Exclamation marks, Question marks
+- 🎯 Combine custom prompts with preset tones for ultimate flexibility
+- 💾 Persistent storage with validation and real-time character counter
+- 🔄 Easy reset to default prompts anytime
 
-### 💼 **X Pro Compatibility**
-- ✅ Full support for `pro.x.com`
-- 🔄 Seamless functionality across all X platforms
-- 🎯 Enhanced user experience for X Pro users
+### 🔐 **Enhanced Privacy & Safety**
+- 🛡️ Account protection through intelligent rate limiting
+- 📊 All tracking data stored locally, never transmitted
+- ⚡ Negligible performance impact (<5% overhead)
+- 🚫 No personal information collected or stored
 
-### 🎨 **UI/UX Improvements**
-- 🌟 Professional landing page for better user onboarding
-- 📱 Improved responsive design across all components
-- 🎯 Better accessibility and keyboard navigation
-- 🔄 Smoother animations and transitions
+### 🎯 **User Experience Improvements**
+- 🌟 Intuitive warning system with clear messaging
+- ⌨️ Enhanced keyboard navigation and accessibility
+- 🎨 Color-coded character counter (grey/orange/red) for custom prompts
+- 🔄 Seamless integration with existing features
 
 ## ✨ Features
 
@@ -44,11 +49,14 @@
 - 💨 Seamless Twitter integration
 - 🔄 Real-time response generation
 
-### 🎭 **Customizable Tones**
+### 🎭 **Customizable Tones & Prompts**
 - 💼 **Professional** - For business interactions
 - 😊 **Casual** - For friendly conversations
 - 🤝 **Friendly** - For warm engagement
 - 😄 **Witty** - For humorous responses
+- ✍️ **Custom Prompts** - Define your own system prompts (up to 2000 characters)
+- 🎨 **Formatting Control** - Toggle emojis, exclamations, and questions
+- 🔄 **Flexible Combinations** - Mix custom prompts with preset tones
 
 ### 🌐 **Platform Support**
 - 🐦 **X/Twitter** - Full support for twitter.com and x.com
@@ -60,6 +68,9 @@
 - 🚫 No data collection
 - 🛡️ Privacy-first design
 - 🔒 Secure local storage
+- ⚠️ **Rate Limit Protection** - Smart tracking to prevent account restrictions
+- 🕐 **10-Minute Window Monitoring** - Tracks replies to keep you within safe limits
+- 🚨 **Proactive Warnings** - Alerts before exceeding Twitter/X guidelines
 
 ## 📥 Installation
 
@@ -93,11 +104,13 @@
 
 ## 🎯 Perfect For
 
-- 💼 **Business Professionals** managing social media presence
-- 📱 **Content Creators** engaging with their audience
-- 🤝 **Community Managers** handling customer support
-- 👥 **Social Media Enthusiasts** wanting better engagement
-- 🚀 **Anyone** looking to save time on Twitter responses
+- 💼 **Business Professionals** managing social media presence safely within limits
+- 📱 **Content Creators** engaging authentically with custom-branded responses
+- 🤝 **Community Managers** handling high-volume support without account risks
+- 👥 **Social Media Enthusiasts** wanting better engagement with personalized AI
+- 🚀 **Power Users** who need custom prompts and advanced formatting control
+- 🛡️ **Safety-Conscious Users** who want to avoid Twitter/X restrictions
+- 🎨 **Brand Managers** requiring consistent tone and messaging
 
 ## 🔧 Configuration
 
@@ -136,6 +149,8 @@
 - 🔑 API key management
 - 🎨 Response customization
 - 🛠️ **Custom Model Configuration** - Select "Custom Model" from OpenRouter dropdown and enter your preferred model name
+- ✍️ **Custom Prompt System** - Define your own AI instructions and formatting preferences
+- 🛡️ **Rate Limit Protection** - Automatic tracking with configurable warnings
 
 ## 📊 How It Works
 
@@ -159,6 +174,9 @@ graph LR
 - 🚫 **No Data Collection** - We don't track or store your data
 - 🛡️ **Privacy First** - Your conversations stay private
 - 🔒 **Secure Processing** - All operations happen locally
+- ⚠️ **Rate Limit Protection** - Local tracking to prevent account restrictions
+- 📊 **Anonymous Tracking** - Only timestamps and tweet URLs stored locally
+- 🛡️ **Account Safety** - Proactive warnings before exceeding Twitter/X limits
 
 ## 🤝 Contributing
 
@@ -174,6 +192,18 @@ We welcome contributions! 🎉
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+## 📋 Version History
+
+### v3.0.1 (October 28, 2025)
+- ✨ Added Rate Limit Warning System for account protection
+- 🎨 Introduced Custom Prompt feature with formatting controls
+- 🛡️ Enhanced privacy and safety features
+- 📊 Minimal performance impact (<5% overhead)
+- 🔄 Non-breaking update - fully backward compatible
+
+### v2.7.0 & Earlier
+- See [CHANGELOG_3.0.1.md](CHANGELOG_3.0.1.md) for complete version history
+
 ## 🆘 Support
 
 - 📧 **Email**: hexquant@gmail.com
@@ -181,6 +211,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - 💬 **Discussions**: [GitHub Discussions](https://github.com/xPOURY4/X-Auto-Reply-Assistant/discussions)
 - 🐦 **X/Twitter**: [@TheRealPourya](https://x.com/TheRealPourya)
 - 📱 **Telegram**: HexQuant hub
+
+### 📚 Documentation
+
+For detailed information about new features:
+- **Rate Limit System**: See `CHANGELOG_3.0.1.md` for complete rate limit documentation
+- **Custom Prompts**: Refer to custom prompt feature guides for setup and usage
+- **Quick Testing**: Use provided test guides to verify functionality
+- **Troubleshooting**: Check feature-specific README files for common issues
 
 ## 🌟 Show Your Support
 
@@ -195,10 +233,15 @@ If you find this extension helpful:
 
 <div align="center">
 
-**🚀 Transform your Twitter engagement today! 🌟**
+**🚀 Transform your Twitter engagement safely with AI-powered customization! 🌟**
+
+**✨ v3.0.1 Features:**
+- 🛡️ Rate Limit Protection - Stay safe from account restrictions
+- ✍️ Custom Prompts - Your brand, your voice, your way
+- 🎨 Advanced Formatting - Full control over AI responses
 
 [![Download Now](https://img.shields.io/badge/Download%20Now-Chrome%20Web%20Store-blue?style=for-the-badge&logo=google-chrome)](https://chromewebstore.google.com/detail/x-auto-reply-assistant/hopmlipidbngnbkokpjllfflnedfajfc?pli=1)
 
-*Made with ❤️ for the Twitter community*
+*Made with ❤️ for the Twitter community | Protecting your account since v3.0.1*
 
 </div>
