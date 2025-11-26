@@ -197,8 +197,8 @@ Developers can adjust thresholds by editing `RATE_LIMIT_CONFIG` in `content.js`:
 - ✅ Multi-tab scenarios
 
 ### Tested Browsers
-- ✅ Chrome 120+
-- ✅ Microsoft Edge 120+
+- ✅ Chrome 121+
+- ✅ Microsoft Edge 121+
 - ✅ Brave (Chromium-based)
 
 ### Tested Platforms
@@ -365,5 +365,6 @@ Version 3.0.1 introduces the **Rate Limit Warning System**, a critical safety fe
 **Upgrade with confidence!**
 
 ---
+
 
 **Thank you for using X Auto Reply Assistant!** 🚀
