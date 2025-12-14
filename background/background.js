@@ -236,7 +236,7 @@ async function handleGenerateReply(request, sendResponse) {
     
     switch (provider) {
       case 'gemini':
-        selectedModel = 'gemini-2.0-flash';
+        selectedModel = 'gemini-2.5-flash';
         console.log(`🤖 [BACKGROUND] Calling Gemini API with model: ${selectedModel}`);
         reply = await callGeminiAPI(prompt, apiKey);
         break;
@@ -367,7 +367,7 @@ async function handleGenerateTweet(request, sendResponse) {
     
     switch (provider) {
       case 'gemini':
-        selectedModel = 'gemini-2.0-flash';
+        selectedModel = 'gemini-2.5-flash';
         console.log(`🤖 [BACKGROUND] Calling Gemini API for tweet with model: ${selectedModel}`);
         tweet = await callGeminiAPI(prompt, apiKey);
         break;
