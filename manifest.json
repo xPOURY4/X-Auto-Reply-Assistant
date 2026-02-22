@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "X Auto Reply Assistant",
-    "version": "2.7.4",
+    "version": "3.0.1", 
     "description": "AI-powered replies that feel human.Generate natural,context-aware responses on X/Twitter using Gemini API & OpenRouter–fast & smart",
     "permissions": [
         "storage",
